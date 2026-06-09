@@ -6,337 +6,642 @@
 <title>Lehmann Mobility Group — Transporter mieten in Zürich</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231F4F3A'/><rect x='11' y='11' width='10' height='10' rx='1' fill='%23DD9A6B' transform='rotate(45 16 16)'/></svg>">
 <meta name="description" content="Transporter mieten in Zürich — stundenweise, schlüssellos, direkt über GoMore buchen."/>
-<meta property="og:title" content="Lehmann Mobility Group — Transporter mieten in Zürich"/>
-<meta property="og:description" content="Gepflegter Renault Trafic, Keyless, Vollkasko. Jetzt auf GoMore buchen."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --sage:#E9EFE4;
-  --sage-2:#DDE6D7;
-  --sage-3:#D2DCCB;
-  --green:#1F4F3A;
-  --green-dk:#16271E;
-  --ink:#16271E;
-  --ink-soft:#3D4F45;
-  --steel:#667A6D;
-  --clay:#DD9A6B;
-  --line:#C5D0BE;
-  --maxw:1100px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--sage);color:var(--ink);font-family:"Inter",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-a{color:inherit;text-decoration:none}
 
-/* ── header ── */
-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--sage) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:9px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
-.mark{width:11px;height:11px;background:var(--clay);transform:rotate(45deg);flex:none;border-radius:1px}
-.brand-short{display:none}
-.nav{display:flex;gap:24px;font-size:13.5px;color:var(--ink-soft);font-weight:500}
-.nav a:hover{color:var(--green)}
-@media(max-width:720px){.nav{display:none}}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:600;padding:11px 18px;font-size:14px;border-radius:3px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -6px rgba(31,79,58,.65)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:var(--sage);box-shadow:none}
-.arrow{transition:transform .2s}
-.btn:hover .arrow{transform:translateX(3px)}
-
-/* ── hero ── */
-.hero{padding:56px 0 36px;background:var(--sage)}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}}
-.eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--clay);flex:none}
-h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(36px,5.5vw,62px);line-height:1;letter-spacing:-.03em;margin-bottom:16px}
-h1 em{font-style:normal;color:var(--green)}
-.lede{font-size:17px;color:var(--ink-soft);margin-bottom:26px;max-width:28em}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--steel)}
-.trust-row span{display:flex;align-items:center;gap:6px}
-.tdot{width:5px;height:5px;border-radius:50%;background:var(--clay);flex:none}
-
-/* ── diagram box ── */
-.diagram{background:var(--sage-2);border:1px solid var(--line);border-radius:6px;padding:36px 18px 16px;position:relative}
-.dtag{position:absolute;top:12px;left:16px;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel)}
-svg .draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 1.8s ease forwards .2s}
-svg .d2{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1s ease forwards 1s}
-@keyframes draw{to{stroke-dashoffset:0}}
-
-/* ── spec strip ── */
-.specs{background:var(--green);color:#fff}
-.specs-grid{display:grid;grid-template-columns:repeat(5,1fr)}
-.spec{padding:24px 16px;border-left:1px solid rgba(255,255,255,.12)}
-.spec:first-child{border-left:none}
-.spec .sk{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-bottom:6px}
-.spec .sv{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:20px}
-.spec .sv small{font-size:12px;font-weight:400;opacity:.7}
-@media(max-width:700px){.specs-grid{grid-template-columns:repeat(2,1fr)}.spec{border-left:none;border-top:1px solid rgba(255,255,255,.12)}}
-
-/* ── how it works ── */
-.how{background:var(--sage);padding:80px 0}
-.section-label{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
-h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(26px,3.5vw,38px);line-height:1.05;letter-spacing:-.025em}
-.sub{color:var(--ink-soft);font-size:16px;margin-top:10px;max-width:36em}
-.sec-head{margin-bottom:52px}
-
-.steps-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
-.steps-flow::before{content:"";position:absolute;top:40px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:2px;background:var(--line)}
-.sf-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px}
-.sf-icon{width:80px;height:80px;border-radius:50%;background:var(--sage-2);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1}
-.sf-icon svg{width:36px;height:36px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.sf-step h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:18px;margin-bottom:6px}
-.sf-step p{font-size:14px;color:var(--steel);line-height:1.5}
-@media(max-width:600px){
-  .steps-flow{grid-template-columns:1fr;gap:32px}
-  .steps-flow::before{display:none}
-  .sf-step{flex-direction:row;text-align:left;gap:20px;align-items:flex-start}
-  .sf-icon{flex:none;width:56px;height:56px;margin-bottom:0}
-  .sf-icon svg{width:26px;height:26px}
+/* ===================== TOKENS ===================== */
+:root {
+  --sage:    #E9EFE4;
+  --sage2:   #DDE6D7;
+  --sage3:   #D0DAC9;
+  --green:   #1F4F3A;
+  --green2:  #16271E;
+  --steel:   #5E7265;
+  --clay:    #C8703A;
+  --clay-bg: #F0E0D2;
+  --line:    #C4D0BC;
+  --white:   #ffffff;
+  --maxw:    1080px;
 }
 
-/* ── use cases ── */
-.uses-sec{background:var(--sage-2);padding:80px 0}
-.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.use-card{background:var(--sage);border:1px solid var(--line);border-radius:6px;padding:28px 20px;transition:border-color .2s,transform .2s}
-.use-card:hover{border-color:var(--green);transform:translateY(-4px)}
-.use-icon{width:52px;height:52px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.use-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.use-card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px;margin-bottom:4px}
-.use-card p{font-size:13.5px;color:var(--steel);line-height:1.45}
-@media(max-width:800px){.use-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:440px){.use-grid{grid-template-columns:1fr}}
+/* ===================== RESET ===================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--sage);
+  color: var(--green2);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
 
-/* ── why ── */
-.why-sec{background:var(--green-dk);color:#fff;padding:80px 0}
-.why-sec .section-label{color:var(--clay)}
-.why-sec h2{color:#fff}
-.why-sec .sub{color:#9BB5A5}
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
-.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px 24px;display:flex;gap:18px;align-items:flex-start}
-.why-icon{width:48px;height:48px;background:rgba(221,154,107,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none}
-.why-icon svg{width:24px;height:24px;stroke:var(--clay);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.why-card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin-bottom:4px}
-.why-card p{font-size:13.5px;color:#9BB5A5;line-height:1.5}
-@media(max-width:640px){.why-grid{grid-template-columns:1fr}}
+/* ===================== LAYOUT ===================== */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-/* ── cta band ── */
-.cta-sec{background:var(--sage);padding:80px 0;text-align:center}
-.cta-sec p{color:var(--ink-soft);margin:12px auto 28px;max-width:28em;font-size:16px}
-.cta-sec .btn{padding:15px 32px;font-size:16px}
+/* ===================== BUTTONS ===================== */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green); color: #fff;
+  font-family: "Inter", sans-serif; font-weight: 600; font-size: 15px;
+  padding: 13px 22px; border-radius: 4px; border: none; cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -6px rgba(31,79,58,0.6); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--green2);
+  font-family: "Inter", sans-serif; font-weight: 600; font-size: 15px;
+  padding: 12px 22px; border-radius: 4px; border: 1.5px solid var(--green2); cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover { background: var(--green2); color: var(--sage); }
 
-/* ── footer ── */
-footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--steel)}
-.foot .brand{font-size:17px;color:var(--ink)}
-.foot a:hover{color:var(--green)}
-@media(max-width:500px){.foot{flex-direction:column;align-items:flex-start;gap:10px}}
-
-/* ── mobile sticky bar ── */
-.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--green);padding:14px 20px;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15)}
-.mob-bar-txt{color:#fff}
-.mob-bar-txt .mbt-sub{font-size:12px;opacity:.7;font-family:"Space Mono",monospace}
-.mob-bar-txt .mbt-main{font-size:15px;font-weight:700}
-.mob-bar-btn{background:#fff;color:var(--green);font-weight:700;font-size:14px;padding:10px 18px;border-radius:3px;white-space:nowrap}
-
-/* ── reveal ── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* ── mobile overrides ── */
-@media(max-width:600px){
-  .brand-long{display:none}
-  .brand-short{display:inline}
-  .bar .btn{display:none}
-  .mob-bar{display:flex}
-  body{padding-bottom:70px}
-  .hero{padding:32px 0 24px}
-  h1{font-size:30px}
-  .lede{font-size:15px;margin-bottom:20px}
-  .hero-btns{flex-direction:column;gap:10px}
-  .hero-btns .btn{width:100%;justify-content:center;padding:14px}
-  .trust-row{flex-direction:column;gap:8px;margin-top:16px}
-  .how,.uses-sec,.why-sec,.cta-sec{padding:52px 0}
-  .sec-head{margin-bottom:36px}
-  .diagram{padding:30px 10px 14px}
-  h2{font-size:26px}
-  .why-card{padding:20px 16px}
+/* ===================== ANNOUNCEMENT BAR ===================== */
+.announce-bar {
+  background: var(--clay);
+  padding: 9px 20px;
+  text-align: center;
+}
+.announce-bar a {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: #fff; font-size: 13.5px; font-weight: 500;
+  flex-wrap: wrap; justify-content: center;
+}
+.announce-pill {
+  background: rgba(0,0,0,0.18);
+  font-family: "Space Mono", monospace;
+  font-size: 11px; font-weight: 700;
+  padding: 2px 9px; border-radius: 20px;
+  color: #fff; white-space: nowrap; letter-spacing: 0.05em;
+}
+.announce-arrow {
+  background: rgba(255,255,255,0.25);
+  width: 22px; height: 22px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 12px; flex: none;
+  transition: background 0.15s;
+}
+.announce-bar a:hover .announce-arrow { background: rgba(255,255,255,0.45); }
+@media (max-width: 600px) {
+  .announce-bar { padding: 8px 16px; }
+  .announce-bar a { font-size: 12.5px; gap: 7px; }
 }
 
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-  svg .draw,.d2{stroke-dashoffset:0!important}
+/* ===================== HEADER ===================== */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(233,239,228,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+.brand {
+  display: flex; align-items: center; gap: 9px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800; font-size: 17px;
+  letter-spacing: -0.02em; color: var(--green2);
+  white-space: nowrap;
+}
+.brand-mark {
+  width: 11px; height: 11px;
+  background: var(--clay);
+  transform: rotate(45deg); border-radius: 1px; flex: none;
+}
+.brand-short { display: none; }
+nav { display: flex; gap: 22px; }
+nav a { font-size: 13.5px; font-weight: 500; color: var(--steel); }
+nav a:hover { color: var(--green); }
+
+/* ===================== HERO ===================== */
+.hero { padding: 60px 0 44px; background: var(--sage); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px; align-items: center;
+}
+.eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-family: "Space Mono", monospace; font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--steel); margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: ""; width: 22px; height: 1.5px;
+  background: var(--clay); flex: none;
+}
+.hero h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800; font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.0; letter-spacing: -0.03em;
+  margin-bottom: 16px; color: var(--green2);
+}
+.hero h1 em { font-style: normal; color: var(--green); }
+.hero-lede {
+  font-size: 16.5px; color: var(--steel);
+  margin-bottom: 28px; max-width: 26em; line-height: 1.55;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.trust-chips {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-top: 24px;
+}
+.chip {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--sage2); border: 1px solid var(--line);
+  border-radius: 20px; padding: 5px 12px;
+  font-size: 12.5px; color: var(--steel);
+}
+.chip-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--clay); flex: none;
+}
+
+/* diagram */
+.diagram-box {
+  background: var(--sage2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 38px 16px 18px;
+  position: relative;
+}
+.diagram-label {
+  position: absolute; top: 12px; left: 16px;
+  font-family: "Space Mono", monospace; font-size: 10px;
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--steel);
+}
+svg .draw { stroke-dasharray: 2800; stroke-dashoffset: 2800; animation: drawLine 1.8s ease forwards 0.3s; }
+svg .d2   { stroke-dasharray: 700;  stroke-dashoffset: 700;  animation: drawLine 1.0s ease forwards 1.1s; }
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+/* ===================== SPEC STRIP ===================== */
+.specs-bar { background: var(--green); }
+.specs-inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.spec-item {
+  padding: 22px 16px;
+  border-left: 1px solid rgba(255,255,255,0.12);
+}
+.spec-item:first-child { border-left: none; }
+.spec-key {
+  font-family: "Space Mono", monospace; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); margin-bottom: 5px;
+}
+.spec-val {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: 19px; color: #fff;
+}
+.spec-val small { font-size: 12px; font-weight: 400; opacity: 0.65; }
+
+/* ===================== HOW IT WORKS ===================== */
+.section-how { background: var(--white); padding: 72px 0; }
+.section-label {
+  font-family: "Space Mono", monospace; font-size: 10.5px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 10px;
+}
+.section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: clamp(24px, 3.5vw, 36px);
+  letter-spacing: -0.025em; line-height: 1.06;
+  color: var(--green2); margin-bottom: 48px;
+}
+.steps-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; background: var(--line);
+  border-radius: 8px; overflow: hidden;
+}
+.step-card {
+  background: var(--white); padding: 32px 24px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
+}
+.step-num-icon {
+  display: flex; align-items: center; gap: 12px;
+}
+.step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  font-family: "Space Mono", monospace; font-weight: 700; font-size: 13px;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.step-icon-wrap {
+  width: 44px; height: 44px;
+  background: var(--sage2); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.step-icon-wrap svg {
+  width: 22px; height: 22px;
+  stroke: var(--green); fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.step-card h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: 17px; color: var(--green2);
+}
+.step-card p { font-size: 14px; color: var(--steel); line-height: 1.5; }
+
+/* ===================== USE CASES ===================== */
+.section-uses { background: var(--sage); padding: 72px 0; }
+.use-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+.use-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px; padding: 24px 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.use-card:hover { border-color: var(--green); transform: translateY(-3px); }
+.use-icon-box {
+  width: 48px; height: 48px;
+  background: var(--green); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+.use-icon-box svg {
+  width: 24px; height: 24px; stroke: #fff; fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.use-card h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: 16px; margin-bottom: 4px; color: var(--green2);
+}
+.use-card p { font-size: 13px; color: var(--steel); line-height: 1.45; }
+
+/* ===================== WHY ===================== */
+.section-why { background: var(--green2); padding: 72px 0; }
+.section-why .section-label { color: var(--clay); }
+.section-why .section-title { color: #fff; margin-bottom: 36px; }
+.why-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.why-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 24px 20px;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.why-icon-box {
+  width: 44px; height: 44px; flex: none;
+  background: rgba(200,112,58,0.18);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.why-icon-box svg {
+  width: 22px; height: 22px; stroke: var(--clay); fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.why-card h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: 16px; color: #fff; margin-bottom: 3px;
+}
+.why-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+/* ===================== REFERRAL ===================== */
+.section-referral { background: var(--clay-bg); padding: 56px 0; }
+.referral-card {
+  background: var(--clay);
+  border-radius: 12px;
+  padding: 36px 32px;
+  display: flex; align-items: center; gap: 28px;
+  flex-wrap: wrap;
+}
+.ref-badge {
+  background: rgba(0,0,0,0.15);
+  border-radius: 10px; padding: 18px 22px;
+  text-align: center; flex: none;
+}
+.ref-chf {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800; font-size: 38px;
+  color: #fff; line-height: 1; letter-spacing: -0.03em;
+}
+.ref-rabatt {
+  font-family: "Space Mono", monospace;
+  font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(255,255,255,0.75);
+  margin-top: 4px;
+}
+.ref-body { flex: 1; min-width: 200px; }
+.ref-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700; font-size: 21px; color: #fff; margin-bottom: 6px;
+}
+.ref-desc { font-size: 14.5px; color: rgba(255,255,255,0.8); line-height: 1.5; }
+.ref-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: var(--green);
+  font-family: "Inter", sans-serif; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: 4px; flex: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ref-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -6px rgba(0,0,0,0.25); }
+.ref-cta svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ===================== CTA SECTION ===================== */
+.section-cta { background: var(--sage); padding: 80px 0; text-align: center; }
+.section-cta .section-title { margin-bottom: 12px; }
+.section-cta p { font-size: 16px; color: var(--steel); margin-bottom: 28px; }
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: var(--sage2);
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+}
+.footer-inner {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 16px; flex-wrap: wrap;
+  font-size: 13.5px; color: var(--steel);
+}
+.footer-inner .brand { font-size: 16px; }
+
+/* ===================== MOBILE STICKY ===================== */
+.mob-cta {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: var(--green);
+  padding: 12px 20px;
+  align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.mob-cta-text .mob-sub {
+  font-family: "Space Mono", monospace; font-size: 11px;
+  color: rgba(255,255,255,0.65);
+}
+.mob-cta-text .mob-main {
+  font-size: 15px; font-weight: 700; color: #fff;
+}
+.mob-cta-btn {
+  background: #fff; color: var(--green);
+  font-weight: 700; font-size: 14px;
+  padding: 10px 18px; border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ===================== REVEAL ===================== */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .use-grid  { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .specs-inner { grid-template-columns: repeat(2, 1fr); }
+  .spec-item { border-left: none; border-top: 1px solid rgba(255,255,255,0.12); }
+  .spec-item:nth-child(-n+2) { border-top: none; }
+  .why-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  /* header */
+  .header-inner { height: 52px; }
+  .brand-long { display: none; }
+  .brand-short { display: inline; }
+  .header-inner .btn-primary { display: none; }
+  nav { display: none; }
+
+  /* show sticky bar */
+  .mob-cta { display: flex; }
+  body { padding-bottom: 68px; }
+
+  /* hero */
+  .hero { padding: 28px 0 20px; }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; }
+  .hero-lede { font-size: 15px; margin-bottom: 20px; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline { width: 100%; justify-content: center; padding: 14px; }
+  .trust-chips { gap: 8px; }
+  .chip { font-size: 12px; padding: 5px 10px; }
+
+  /* sections */
+  .section-how, .section-uses, .section-why,
+  .section-referral, .section-cta { padding: 48px 0; }
+  .section-title { margin-bottom: 28px; }
+
+  /* referral */
+  .referral-card {
+    flex-direction: column; gap: 20px;
+    padding: 24px 20px; align-items: stretch;
+  }
+  .ref-badge { text-align: left; padding: 14px 18px; }
+  .ref-chf { font-size: 32px; }
+  .ref-cta { width: 100%; justify-content: center; }
+
+  /* use grid */
+  .use-grid { gap: 10px; }
+  .use-card { padding: 18px 14px; }
+
+  /* steps */
+  .step-card { padding: 20px 16px; }
+
+  /* why */
+  .why-card { padding: 18px 16px; }
+
+  /* footer */
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media (max-width: 400px) {
+  .use-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  svg .draw, svg .d2 { stroke-dashoffset: 0 !important; }
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ========== ANNOUNCEMENT BAR ========== -->
+<div class="announce-bar">
+  <a href="https://gomore.ch/invite/3208605" target="_blank" rel="noopener">
+    <span class="announce-pill">CHF 20.— Rabatt</span>
+    Melde dich über unseren Link an und spare bei der ersten Buchung
+    <span class="announce-arrow">→</span>
+  </a>
+</div>
+
+<!-- ========== HEADER ========== -->
 <header>
-  <div class="wrap bar">
+  <div class="wrap header-inner">
     <a href="#top" class="brand">
-      <span class="mark"></span>
+      <span class="brand-mark"></span>
       <span class="brand-long">Lehmann Mobility Group</span>
       <span class="brand-short">LMG</span>
     </a>
-    <nav class="nav">
+    <nav>
       <a href="#ablauf">Ablauf</a>
       <a href="#einsatz">Einsatz</a>
       <a href="#warum">Warum wir</a>
     </nav>
-    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Jetzt buchen <span class="arrow">→</span></a>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn-primary">
+      Jetzt buchen →
+    </a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
+<!-- ========== HERO ========== -->
 <section class="hero">
   <div class="wrap hero-grid">
+
     <div class="reveal in">
       <div class="eyebrow">Transporter mieten · Zürich</div>
       <h1>Dein Van.<br><em>Stundenweise.</em><br>Schlüssellos.</h1>
-      <p class="lede">Renault Trafic in Zürich — buchen, per Handy aufschliessen, losfahren. Keine Übergabe, keine Öffnungszeiten.</p>
+      <p class="hero-lede">Renault Trafic in Zürich — buchen, per Handy aufschliessen, losfahren. Keine Übergabe, keine Öffnungszeiten.</p>
       <div class="hero-btns">
-        <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Auf GoMore buchen <span class="arrow">→</span></a>
-        <a href="#ablauf" class="btn ghost">Wie funktioniert's?</a>
+        <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn-primary">Auf GoMore buchen →</a>
+        <a href="#ablauf" class="btn-outline">Wie funktioniert's?</a>
       </div>
-      <div class="trust-row">
-        <span><span class="tdot"></span>Vollkasko über Baloise</span>
-        <span><span class="tdot"></span>E-Vignette dabei</span>
-        <span><span class="tdot"></span>Zentral in Zürich</span>
+      <div class="trust-chips">
+        <span class="chip"><span class="chip-dot"></span>Vollkasko Baloise</span>
+        <span class="chip"><span class="chip-dot"></span>E-Vignette dabei</span>
+        <span class="chip"><span class="chip-dot"></span>Zentral Zürich</span>
       </div>
     </div>
 
-    <div class="diagram reveal in">
-      <span class="dtag">Renault Trafic · dCi 115</span>
-      <svg viewBox="0 0 820 430" width="100%" role="img" aria-label="Technische Zeichnung Trafic">
-        <g fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <div class="diagram-box reveal in">
+      <span class="diagram-label">Renault Trafic · dCi 115</span>
+      <svg viewBox="0 0 820 430" width="100%" role="img" aria-label="Technische Zeichnung Renault Trafic">
+        <g fill="none" stroke="#16271E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
           <path class="draw" d="M60,312 L60,212 L82,150 L152,140 L208,82 L772,82 L780,302 L700,312 L686,312 A46,46 0 0 0 594,312 L262,312 A46,46 0 0 0 170,312 Z"/>
           <path class="d2" d="M300,82 L300,312"/>
           <path class="d2" d="M212,98 L292,98 L292,168 L196,168 Z"/>
           <path class="d2" d="M540,90 L540,300"/>
         </g>
-        <g fill="none" stroke="var(--ink)" stroke-width="2.5">
+        <g fill="none" stroke="#16271E" stroke-width="2.5">
           <circle class="d2" cx="216" cy="312" r="40"/>
           <circle class="d2" cx="640" cy="312" r="40"/>
         </g>
-        <circle cx="216" cy="312" r="13" fill="var(--ink)"/>
-        <circle cx="640" cy="312" r="13" fill="var(--ink)"/>
-        <!-- length annotation -->
-        <g stroke="var(--clay)" stroke-width="1.8" class="d2">
+        <circle cx="216" cy="312" r="13" fill="#16271E"/>
+        <circle cx="640" cy="312" r="13" fill="#16271E"/>
+        <g stroke="#C8703A" stroke-width="1.8" class="d2">
           <line x1="300" y1="374" x2="772" y2="374"/>
           <line x1="300" y1="364" x2="300" y2="384"/>
           <line x1="772" y1="364" x2="772" y2="384"/>
         </g>
-        <text x="536" y="400" text-anchor="middle" fill="var(--clay)" font-family="Space Mono,monospace" font-size="15" font-weight="700">2.54 m Laderaum</text>
-        <!-- height annotation -->
-        <g stroke="var(--clay)" stroke-width="1.8" class="d2">
-          <line x1="798" y1="82" x2="798" y2="302"/>
-          <line x1="788" y1="82" x2="808" y2="82"/>
-          <line x1="788" y1="302" x2="808" y2="302"/>
+        <text x="536" y="400" text-anchor="middle" fill="#C8703A" font-family="Space Mono,monospace" font-size="15" font-weight="700">2.54 m Laderaum</text>
+        <g stroke="#C8703A" stroke-width="1.8" class="d2">
+          <line x1="800" y1="82" x2="800" y2="302"/>
+          <line x1="790" y1="82" x2="810" y2="82"/>
+          <line x1="790" y1="302" x2="810" y2="302"/>
         </g>
-        <text x="812" y="200" fill="var(--clay)" font-family="Space Mono,monospace" font-size="13" font-weight="700" transform="rotate(90 812 200)" text-anchor="middle">1.39 m</text>
+        <text x="815" y="200" fill="#C8703A" font-family="Space Mono,monospace" font-size="13" font-weight="700" transform="rotate(90 815 200)" text-anchor="middle">1.39 m</text>
       </svg>
     </div>
+
   </div>
 </section>
 
-<!-- SPEC STRIP -->
-<div class="specs" id="fahrzeug">
+<!-- ========== SPEC STRIP ========== -->
+<div class="specs-bar" id="fahrzeug">
   <div class="wrap">
-    <div class="specs-grid">
-      <div class="spec"><div class="sk">Laderaum L×B×H</div><div class="sv">2.54×1.66<small> ×1.39 m</small></div></div>
-      <div class="spec"><div class="sk">Ladekante</div><div class="sv">552<small> mm</small></div></div>
-      <div class="spec"><div class="sk">Getriebe</div><div class="sv">Manuell</div></div>
-      <div class="spec"><div class="sk">Antrieb</div><div class="sv">Diesel<small> dCi 115</small></div></div>
-      <div class="spec"><div class="sk">Zugang</div><div class="sv">Keyless</div></div>
+    <div class="specs-inner">
+      <div class="spec-item"><div class="spec-key">Laderaum L×B×H</div><div class="spec-val">2.54×1.66<small> ×1.39 m</small></div></div>
+      <div class="spec-item"><div class="spec-key">Ladekante</div><div class="spec-val">552<small> mm</small></div></div>
+      <div class="spec-item"><div class="spec-key">Getriebe</div><div class="spec-val">Manuell</div></div>
+      <div class="spec-item"><div class="spec-key">Antrieb</div><div class="spec-val">Diesel<small> dCi 115</small></div></div>
+      <div class="spec-item"><div class="spec-key">Zugang</div><div class="spec-val">Keyless</div></div>
     </div>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="ablauf">
+<!-- ========== HOW IT WORKS ========== -->
+<section class="section-how" id="ablauf">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="reveal">
       <div class="section-label">So funktioniert's</div>
-      <h2>In 3 Schritten unterwegs</h2>
+      <div class="section-title">In 3 Schritten unterwegs</div>
     </div>
-    <div class="steps-flow reveal">
+    <div class="steps-row reveal">
 
-      <div class="sf-step">
-        <div class="sf-icon">
-          <!-- smartphone icon -->
-          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-width="2.5"/></svg>
+      <div class="step-card">
+        <div class="step-num-icon">
+          <span class="step-num">1</span>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1" fill="#1F4F3A"/></svg>
+          </div>
         </div>
-        <div>
-          <h3>Buchen</h3>
-          <p>Datum & Zeit auf GoMore wählen — Bestätigung kommt sofort.</p>
-        </div>
+        <h3>Buchen</h3>
+        <p>Datum & Zeit auf GoMore wählen — Bestätigung sofort.</p>
       </div>
 
-      <div class="sf-step">
-        <div class="sf-icon">
-          <!-- unlock icon -->
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+      <div class="step-card">
+        <div class="step-num-icon">
+          <span class="step-num">2</span>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+          </div>
         </div>
-        <div>
-          <h3>Aufschliessen</h3>
-          <p>Per GoMore-App entriegeln — kein Schlüssel, kein Warten.</p>
-        </div>
+        <h3>Aufschliessen</h3>
+        <p>Per App entriegeln — kein Schlüssel, kein Warten.</p>
       </div>
 
-      <div class="sf-step">
-        <div class="sf-icon">
-          <!-- steering wheel / van icon -->
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.2" y1="16.5" x2="10" y2="13.7"/><line x1="19.8" y1="16.5" x2="14" y2="13.7"/></svg>
+      <div class="step-card">
+        <div class="step-num-icon">
+          <span class="step-num">3</span>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.2" y1="16.5" x2="10" y2="13.7"/><line x1="19.8" y1="16.5" x2="14" y2="13.7"/></svg>
+          </div>
         </div>
-        <div>
-          <h3>Losfahren</h3>
-          <p>Beladen und los. Danach zurückstellen und abschliessen.</p>
-        </div>
+        <h3>Losfahren</h3>
+        <p>Beladen und los. Danach zurückstellen & abschliessen.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- USE CASES -->
-<section class="uses-sec" id="einsatz">
+<!-- ========== USE CASES ========== -->
+<section class="section-uses" id="einsatz">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="reveal">
       <div class="section-label">Wofür</div>
-      <h2>Passt für fast alles</h2>
+      <div class="section-title">Passt für fast alles</div>
     </div>
     <div class="use-grid reveal">
 
       <div class="use-card">
-        <div class="use-icon">
-          <!-- boxes / moving icon -->
+        <div class="use-icon-box">
           <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
         <h3>Umzug</h3>
-        <p>WG, Zimmer, ganze Wohnung — passt rein.</p>
+        <p>WG, Zimmer oder ganze Wohnung — passt rein.</p>
       </div>
 
       <div class="use-card">
-        <div class="use-icon">
-          <!-- sofa icon -->
+        <div class="use-icon-box">
           <svg viewBox="0 0 24 24"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4H2z"/><line x1="6" y1="19" x2="6" y2="15"/><line x1="18" y1="19" x2="18" y2="15"/></svg>
         </div>
         <h3>Möbel & IKEA</h3>
-        <p>Sofa, Schrank, Matratze — ohne Liefergebühr.</p>
+        <p>Sofa, Schrank, Matratze — kein Lieferdienst nötig.</p>
       </div>
 
       <div class="use-card">
-        <div class="use-icon">
-          <!-- tools icon -->
+        <div class="use-icon-box">
           <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
         </div>
         <h3>Baumarkt</h3>
@@ -344,8 +649,7 @@ footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
       </div>
 
       <div class="use-card">
-        <div class="use-icon">
-          <!-- calendar / event icon -->
+        <div class="use-icon-box">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Anlass & Gewerbe</h3>
@@ -356,40 +660,37 @@ footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
   </div>
 </section>
 
-<!-- WHY -->
-<section class="why-sec" id="warum">
+<!-- ========== WHY ========== -->
+<section class="section-why" id="warum">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="reveal">
       <div class="section-label">Warum Lehmann Mobility</div>
-      <h2>Fair. Versichert. Einfach.</h2>
+      <div class="section-title">Fair. Versichert. Einfach.</div>
     </div>
     <div class="why-grid reveal">
 
       <div class="why-card">
-        <div class="why-icon">
-          <!-- shield icon -->
+        <div class="why-icon-box">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div>
           <h3>Vollkasko inbegriffen</h3>
-          <p>Jede Buchung ist über GoMore & Baloise vollversichert.</p>
+          <p>Jede Buchung vollversichert über GoMore & Baloise.</p>
         </div>
       </div>
 
       <div class="why-card">
-        <div class="why-icon">
-          <!-- road / vignette icon -->
-          <svg viewBox="0 0 24 24"><path d="M3 17l9-14 9 14H3z"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="12" y1="16" x2="12" y2="17"/></svg>
+        <div class="why-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M3 17l9-14 9 14H3z"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="12" y1="16.5" x2="12" y2="17"/></svg>
         </div>
         <div>
           <h3>E-Vignette dabei</h3>
-          <p>Autobahn einfach mitbenutzen — ist alles inklusive.</p>
+          <p>Autobahn inklusive — einfach losfahren.</p>
         </div>
       </div>
 
       <div class="why-card">
-        <div class="why-icon">
-          <!-- clock icon -->
+        <div class="why-icon-box">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div>
@@ -399,8 +700,7 @@ footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
       </div>
 
       <div class="why-card">
-        <div class="why-icon">
-          <!-- map pin icon -->
+        <div class="why-icon-box">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
@@ -413,61 +713,65 @@ footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
   </div>
 </section>
 
-<!-- REFERRAL BANNER -->
-<section class="referral-sec">
+<!-- ========== REFERRAL ========== -->
+<section class="section-referral">
   <div class="wrap reveal">
-    <div class="referral-inner">
-      <div class="referral-badge">
-        <span class="ref-amount">CHF 20.—</span>
-        <span class="ref-label">Rabatt</span>
+    <div class="referral-card">
+      <div class="ref-badge">
+        <div class="ref-chf">CHF 20.—</div>
+        <div class="ref-rabatt">Rabatt</div>
       </div>
-      <div class="referral-text">
+      <div class="ref-body">
         <div class="ref-title">Erste Miete mit Rabatt</div>
-        <div class="ref-sub">Melde dich über unseren Link an — und du bekommst CHF 20.— Rabatt auf deine erste Buchung.</div>
+        <div class="ref-desc">Melde dich über unseren Link an und erhalte CHF 20.— Rabatt auf deine erste Buchung.</div>
       </div>
-      <a href="https://gomore.ch/invite/3208605" target="_blank" rel="noopener" class="ref-btn">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      <a href="https://gomore.ch/invite/3208605" target="_blank" rel="noopener" class="ref-cta">
+        <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         Jetzt anmelden & sparen
       </a>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-sec" id="buchen">
+<!-- ========== CTA ========== -->
+<section class="section-cta" id="buchen">
   <div class="wrap reveal">
-    <div class="section-label" style="text-align:center">Jetzt buchen</div>
-    <h2>Verfügbarkeit & Preise auf GoMore</h2>
+    <div class="section-label">Jetzt buchen</div>
+    <div class="section-title">Verfügbarkeit & Preise auf GoMore</div>
     <p>Live-Kalender und aktuelle Preise direkt auf der Plattform.</p>
-    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Auf GoMore buchen <span class="arrow">→</span></a>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn-primary" style="font-size:16px;padding:15px 32px;">Auf GoMore buchen →</a>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ========== FOOTER ========== -->
 <footer>
-  <div class="wrap foot">
-    <a href="#top" class="brand"><span class="mark"></span><span class="brand-long">Lehmann Mobility Group</span><span class="brand-short">LMG</span></a>
-    <div>Transporter-Vermietung · Zürich</div>
-    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener">GoMore ansehen →</a>
+  <div class="wrap footer-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-long">Lehmann Mobility Group</span>
+      <span class="brand-short">LMG</span>
+    </a>
+    <span>Transporter-Vermietung · Zürich</span>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" style="color:var(--green);font-weight:600;">GoMore ansehen →</a>
   </div>
 </footer>
 
-<!-- MOBILE STICKY BAR -->
-<div class="mob-bar">
-  <div class="mob-bar-txt">
-    <div class="mbt-sub">Renault Trafic · Zürich</div>
-    <div class="mbt-main">Jetzt stundenweise buchen</div>
+<!-- ========== MOBILE STICKY BAR ========== -->
+<div class="mob-cta">
+  <div class="mob-cta-text">
+    <div class="mob-sub">Renault Trafic · Zürich</div>
+    <div class="mob-main">Jetzt stundenweise buchen</div>
   </div>
-  <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="mob-bar-btn">GoMore →</a>
+  <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="mob-cta-btn">GoMore →</a>
 </div>
 
 <script>
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
