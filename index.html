@@ -171,13 +171,100 @@
     .reveal{opacity:1;transform:none}
     svg .draw{stroke-dashoffset:0!important}
   }
+
+  /* brand: show long on desktop, short on mobile */
+  .brand-short{display:none}
+  .brand-long{display:inline}
+
+  /* sticky mobile bottom CTA */
+  .mobile-cta{display:none}
+
+  /* ---------- mobile ---------- */
+  @media(max-width:600px){
+    /* brand: show LMG abbreviation only */
+    .brand-short{display:inline}
+    .brand-long{display:none}
+
+    /* header: clean single line */
+    .bar{height:52px}
+    .brand{font-size:16px;gap:8px}
+    .brand .mark{width:10px;height:10px}
+
+    /* hide header button on mobile — replaced by sticky bottom bar */
+    .bar .btn{display:none}
+
+    /* sticky bottom booking bar */
+    .mobile-cta{
+      display:flex;
+      position:fixed;bottom:0;left:0;right:0;z-index:100;
+      background:var(--green);color:#fff;
+      padding:16px 24px;
+      align-items:center;justify-content:space-between;
+      border-top:2px solid rgba(255,255,255,.15);
+    }
+    .mobile-cta .mc-label{font-size:13px;opacity:.75;font-family:"Space Mono",monospace;letter-spacing:.05em}
+    .mobile-cta .mc-btn{
+      background:#fff;color:var(--green);
+      font-weight:700;font-size:15px;
+      padding:10px 20px;border-radius:2px;
+      white-space:nowrap;
+    }
+    /* add bottom padding to body so content isn't hidden behind bar */
+    body{padding-bottom:72px}
+
+    /* hero */
+    .hero{padding:32px 0 24px}
+    h1{font-size:30px;line-height:1.05;margin-bottom:14px;letter-spacing:-.02em}
+    .lede{font-size:15.5px;line-height:1.55;margin-bottom:20px}
+    .eyebrow{font-size:10.5px;margin-bottom:14px}
+
+    /* hero buttons: full-width, equal size */
+    .hero-cta{flex-direction:column;gap:10px}
+    .hero-cta .btn{width:100%;justify-content:center;padding:14px 20px;font-size:15px}
+
+    /* trust: vertical list */
+    .trust{flex-direction:column;gap:8px;margin-top:18px;font-size:13px}
+
+    /* spec strip: 2-col */
+    .specs-grid{grid-template-columns:repeat(2,1fr)}
+    .spec{padding:16px 14px}
+    .spec .v{font-size:18px}
+    .spec .k{font-size:10px}
+
+    /* sections: tighter */
+    section{padding:48px 0}
+    .sec-head{margin-bottom:28px}
+    h2{font-size:26px}
+    .cta-band{padding:52px 0;text-align:center}
+    .cta-band .btn{width:100%;justify-content:center}
+
+    /* steps: tighter */
+    .step{padding:22px 18px}
+    .step h3{font-size:18px}
+
+    /* use cases: 2-col */
+    .uses{grid-template-columns:repeat(2,1fr);gap:10px}
+    .use{padding:18px 14px}
+
+    /* why grid: single col */
+    .why-grid{grid-template-columns:1fr;gap:20px}
+    .why{padding:52px 0 !important}
+
+    /* footer: stack */
+    .foot{flex-direction:column;align-items:flex-start;gap:10px}
+
+    /* diagram: compact */
+    .diagram{padding:32px 12px 12px}
+    .diagram .tag.r{display:none}
+    .diagram .tag{font-size:10px}
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <a href="#top" class="brand"><span class="mark"></span>Lehmann Mobility Group</a>
+    <a href="#top" class="brand"><span class="mark"></span><span class="brand-long">Lehmann Mobility Group</span><span class="brand-short">LMG</span></a>
     <nav class="navlinks">
       <a href="#fahrzeug">Fahrzeug</a>
       <a href="#ablauf">So funktioniert's</a>
@@ -329,11 +416,20 @@
 
 <footer>
   <div class="wrap foot">
-    <a href="#top" class="brand"><span class="mark"></span>Lehmann Mobility Group</a>
+    <a href="#top" class="brand"><span class="mark"></span><span class="brand-long">Lehmann Mobility Group</span><span class="brand-short">LMG</span></a>
     <div>Transporter-Vermietung &middot; Zürich</div>
     <div><a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener">Auf GoMore ansehen &rarr;</a></div>
   </div>
 </footer>
+
+<!-- mobile sticky bottom bar -->
+<div class="mobile-cta">
+  <div>
+    <div class="mc-label">Transporter · Zürich</div>
+    <div style="font-weight:700;font-size:15px">Jetzt stundenweise buchen</div>
+  </div>
+  <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="mc-btn">GoMore →</a>
+</div>
 
 <script>
   const io = new IntersectionObserver((entries)=>{
