@@ -1,440 +1,452 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Lehmann Mobility Group — Transporter mieten in Zürich</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231F4F3A'/><rect x='11' y='11' width='10' height='10' rx='1' fill='%23DD9A6B' transform='rotate(45 16 16)'/></svg>">
-<meta name="description" content="Transporter mieten in Zürich — stundenweise, schlüssellos, direkt über GoMore buchen.">
-<meta property="og:title" content="Lehmann Mobility Group — Transporter mieten in Zürich">
-<meta property="og:description" content="Gepflegter Renault Trafic, Keyless, mit Vollkasko versichert. Jetzt auf GoMore buchen.">
-<meta property="og:type" content="website">
+<meta name="description" content="Transporter mieten in Zürich — stundenweise, schlüssellos, direkt über GoMore buchen."/>
+<meta property="og:title" content="Lehmann Mobility Group — Transporter mieten in Zürich"/>
+<meta property="og:description" content="Gepflegter Renault Trafic, Keyless, Vollkasko. Jetzt auf GoMore buchen."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#E9EFE4;        /* pastel sage */
-    --paper-2:#E0E8DA;
-    --ink:#16271E;          /* deep green-black */
-    --ink-soft:#384A3F;
-    --green:#1F4F3A;        /* brand deep green */
-    --green-dk:#16271E;
-    --steel:#5E6B61;        /* muted labels, hairlines */
-    --clay:#DD9A6B;         /* warm pastel pop */
-    --line:#CBD4C4;
-    --maxw:1120px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Inter",system-ui,sans-serif;
-    font-size:17px;line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  a{color:inherit;text-decoration:none}
-  .mono{font-family:"Space Mono",monospace}
+:root{
+  --sage:#E9EFE4;
+  --sage-2:#DDE6D7;
+  --sage-3:#D2DCCB;
+  --green:#1F4F3A;
+  --green-dk:#16271E;
+  --ink:#16271E;
+  --ink-soft:#3D4F45;
+  --steel:#667A6D;
+  --clay:#DD9A6B;
+  --line:#C5D0BE;
+  --maxw:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--sage);color:var(--ink);font-family:"Inter",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
 
-  /* ---------- top bar ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.02em}
-  .brand .mark{width:13px;height:13px;background:var(--clay);transform:rotate(45deg);flex:none}
-  .navlinks{display:flex;gap:28px;font-size:14px;color:var(--ink-soft);font-weight:500}
-  .navlinks a:hover{color:var(--green)}
-  @media(max-width:760px){.navlinks{display:none}}
+/* ── header ── */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--sage) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:9px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
+.mark{width:11px;height:11px;background:var(--clay);transform:rotate(45deg);flex:none;border-radius:1px}
+.brand-short{display:none}
+.nav{display:flex;gap:24px;font-size:13.5px;color:var(--ink-soft);font-weight:500}
+.nav a:hover{color:var(--green)}
+@media(max-width:720px){.nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:600;padding:11px 18px;font-size:14px;border-radius:3px;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -6px rgba(31,79,58,.65)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--sage);box-shadow:none}
+.arrow{transition:transform .2s}
+.btn:hover .arrow{transform:translateX(3px)}
 
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;
-    background:var(--green);color:#fff;font-weight:600;
-    padding:12px 20px;font-size:15px;
-    border:none;cursor:pointer;border-radius:2px;
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px -8px rgba(31,79,58,.7)}
-  .btn .arrow{transition:transform .2s ease}
-  .btn:hover .arrow{transform:translateX(4px)}
-  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-  .btn.ghost:hover{box-shadow:none;background:var(--ink);color:var(--paper)}
+/* ── hero ── */
+.hero{padding:56px 0 36px;background:var(--sage)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+.eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--clay);flex:none}
+h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(36px,5.5vw,62px);line-height:1;letter-spacing:-.03em;margin-bottom:16px}
+h1 em{font-style:normal;color:var(--green)}
+.lede{font-size:17px;color:var(--ink-soft);margin-bottom:26px;max-width:28em}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--steel)}
+.trust-row span{display:flex;align-items:center;gap:6px}
+.tdot{width:5px;height:5px;border-radius:50%;background:var(--clay);flex:none}
 
-  /* ---------- hero ---------- */
-  .hero{padding:64px 0 40px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}}
+/* ── diagram box ── */
+.diagram{background:var(--sage-2);border:1px solid var(--line);border-radius:6px;padding:36px 18px 16px;position:relative}
+.dtag{position:absolute;top:12px;left:16px;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel)}
+svg .draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 1.8s ease forwards .2s}
+svg .d2{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1s ease forwards 1s}
+@keyframes draw{to{stroke-dashoffset:0}}
 
-  .eyebrow{
-    font-family:"Space Mono",monospace;font-size:12.5px;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px;margin-bottom:22px;
-  }
-  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--clay)}
-  h1{
-    font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
-    font-size:clamp(40px,6.4vw,68px);line-height:.98;letter-spacing:-.03em;margin-bottom:22px;
-  }
-  h1 em{font-style:normal;color:var(--green)}
-  .lede{font-size:18.5px;color:var(--ink-soft);max-width:30em;margin-bottom:30px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .trust{margin-top:26px;font-size:13.5px;color:var(--steel);display:flex;gap:22px;flex-wrap:wrap}
-  .trust span{display:flex;align-items:center;gap:7px}
-  .trust .dot{width:6px;height:6px;border-radius:50%;background:var(--clay)}
+/* ── spec strip ── */
+.specs{background:var(--green);color:#fff}
+.specs-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.spec{padding:24px 16px;border-left:1px solid rgba(255,255,255,.12)}
+.spec:first-child{border-left:none}
+.spec .sk{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-bottom:6px}
+.spec .sv{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:20px}
+.spec .sv small{font-size:12px;font-weight:400;opacity:.7}
+@media(max-width:700px){.specs-grid{grid-template-columns:repeat(2,1fr)}.spec{border-left:none;border-top:1px solid rgba(255,255,255,.12)}}
 
-  /* ---------- van diagram ---------- */
-  .diagram{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:22px 22px 16px;
-    position:relative;
-  }
-  .diagram .tag{
-    position:absolute;top:14px;left:18px;
-    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--steel);
-  }
-  .diagram .tag.r{left:auto;right:18px}
-  svg .draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2s ease forwards .25s}
-  svg .draw.d2{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1s ease forwards 1.1s}
-  @keyframes draw{to{stroke-dashoffset:0}}
+/* ── how it works ── */
+.how{background:var(--sage);padding:80px 0}
+.section-label{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(26px,3.5vw,38px);line-height:1.05;letter-spacing:-.025em}
+.sub{color:var(--ink-soft);font-size:16px;margin-top:10px;max-width:36em}
+.sec-head{margin-bottom:52px}
 
-  /* ---------- spec strip ---------- */
-  .specs{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .specs-grid{display:grid;grid-template-columns:repeat(5,1fr)}
-  .spec{padding:26px 18px;border-left:1px solid var(--line)}
-  .spec:first-child{border-left:none}
-  .spec .k{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin-bottom:8px}
-  .spec .v{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
-  .spec .v small{font-size:13px;color:var(--steel);font-weight:400}
-  @media(max-width:820px){.specs-grid{grid-template-columns:repeat(2,1fr)}.spec{border-top:1px solid var(--line)}.spec:nth-child(odd){border-left:none}}
+.steps-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.steps-flow::before{content:"";position:absolute;top:40px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:2px;background:var(--line)}
+.sf-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px}
+.sf-icon{width:80px;height:80px;border-radius:50%;background:var(--sage-2);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1}
+.sf-icon svg{width:36px;height:36px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sf-step h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:18px;margin-bottom:6px}
+.sf-step p{font-size:14px;color:var(--steel);line-height:1.5}
+@media(max-width:600px){
+  .steps-flow{grid-template-columns:1fr;gap:32px}
+  .steps-flow::before{display:none}
+  .sf-step{flex-direction:row;text-align:left;gap:20px;align-items:flex-start}
+  .sf-icon{flex:none;width:56px;height:56px;margin-bottom:0}
+  .sf-icon svg{width:26px;height:26px}
+}
 
-  /* ---------- generic section ---------- */
-  section{padding:78px 0}
-  .sec-head{margin-bottom:46px;max-width:38em}
-  .sec-eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
-  h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1.04;letter-spacing:-.025em}
-  .sec-head p{margin-top:14px;color:var(--ink-soft);font-size:17px}
+/* ── use cases ── */
+.uses-sec{background:var(--sage-2);padding:80px 0}
+.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.use-card{background:var(--sage);border:1px solid var(--line);border-radius:6px;padding:28px 20px;transition:border-color .2s,transform .2s}
+.use-card:hover{border-color:var(--green);transform:translateY(-4px)}
+.use-icon{width:52px;height:52px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.use-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.use-card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px;margin-bottom:4px}
+.use-card p{font-size:13.5px;color:var(--steel);line-height:1.45}
+@media(max-width:800px){.use-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){.use-grid{grid-template-columns:1fr}}
 
-  /* steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
-  .step{background:var(--paper);padding:34px 28px}
-  .step .num{font-family:"Space Mono",monospace;color:var(--clay);font-size:14px;font-weight:700;margin-bottom:18px}
-  .step h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;letter-spacing:-.01em}
-  .step p{color:var(--ink-soft);font-size:15.5px}
-  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+/* ── why ── */
+.why-sec{background:var(--green-dk);color:#fff;padding:80px 0}
+.why-sec .section-label{color:var(--clay)}
+.why-sec h2{color:#fff}
+.why-sec .sub{color:#9BB5A5}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px 24px;display:flex;gap:18px;align-items:flex-start}
+.why-icon{width:48px;height:48px;background:rgba(221,154,107,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none}
+.why-icon svg{width:24px;height:24px;stroke:var(--clay);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin-bottom:4px}
+.why-card p{font-size:13.5px;color:#9BB5A5;line-height:1.5}
+@media(max-width:640px){.why-grid{grid-template-columns:1fr}}
 
-  /* use cases */
-  .uses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .use{border:1px solid var(--line);padding:24px 20px;border-radius:3px;transition:border-color .2s ease,transform .2s ease;background:var(--paper)}
-  .use:hover{border-color:var(--green);transform:translateY(-3px)}
-  .use .ic{font-family:"Space Mono",monospace;color:var(--clay);font-size:13px;margin-bottom:14px}
-  .use h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin-bottom:6px}
-  .use p{font-size:14px;color:var(--steel)}
-  @media(max-width:860px){.uses{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:480px){.uses{grid-template-columns:1fr}}
+/* ── cta band ── */
+.cta-sec{background:var(--sage);padding:80px 0;text-align:center}
+.cta-sec p{color:var(--ink-soft);margin:12px auto 28px;max-width:28em;font-size:16px}
+.cta-sec .btn{padding:15px 32px;font-size:16px}
 
-  /* why band */
-  .why{background:var(--green-dk);color:var(--paper)}
-  .why .sec-eyebrow{color:var(--clay)}
-  .why h2{color:var(--paper)}
-  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 56px;margin-top:8px}
-  .point{display:flex;gap:16px}
-  .point .b{flex:none;width:30px;height:30px;border:1.5px solid var(--clay);color:var(--clay);display:flex;align-items:center;justify-content:center;font-family:"Space Mono",monospace;font-size:13px;border-radius:2px;margin-top:3px}
-  .point h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:18px;margin-bottom:4px}
-  .point p{color:#B7C4B9;font-size:15px}
-  @media(max-width:760px){.why-grid{grid-template-columns:1fr;gap:26px}}
+/* ── footer ── */
+footer{background:var(--sage-2);border-top:1px solid var(--line);padding:36px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--steel)}
+.foot .brand{font-size:17px;color:var(--ink)}
+.foot a:hover{color:var(--green)}
+@media(max-width:500px){.foot{flex-direction:column;align-items:flex-start;gap:10px}}
 
-  /* final cta */
-  .cta-band{text-align:center;padding:96px 0}
-  .cta-band h2{margin-bottom:14px}
-  .cta-band p{color:var(--ink-soft);max-width:30em;margin:0 auto 30px}
+/* ── mobile sticky bar ── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--green);padding:14px 20px;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15)}
+.mob-bar-txt{color:#fff}
+.mob-bar-txt .mbt-sub{font-size:12px;opacity:.7;font-family:"Space Mono",monospace}
+.mob-bar-txt .mbt-main{font-size:15px;font-weight:700}
+.mob-bar-btn{background:#fff;color:var(--green);font-weight:700;font-size:14px;padding:10px 18px;border-radius:3px;white-space:nowrap}
 
-  footer{border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--steel)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot .brand{font-size:18px}
-  .foot a:hover{color:var(--green)}
+/* ── reveal ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
 
-  :focus-visible{outline:2.5px solid var(--green);outline-offset:3px}
+/* ── mobile overrides ── */
+@media(max-width:600px){
+  .brand-long{display:none}
+  .brand-short{display:inline}
+  .bar .btn{display:none}
+  .mob-bar{display:flex}
+  body{padding-bottom:70px}
+  .hero{padding:32px 0 24px}
+  h1{font-size:30px}
+  .lede{font-size:15px;margin-bottom:20px}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn{width:100%;justify-content:center;padding:14px}
+  .trust-row{flex-direction:column;gap:8px;margin-top:16px}
+  .how,.uses-sec,.why-sec,.cta-sec{padding:52px 0}
+  .sec-head{margin-bottom:36px}
+  .diagram{padding:30px 10px 14px}
+  h2{font-size:26px}
+  .why-card{padding:20px 16px}
+}
 
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
-    svg .draw{stroke-dashoffset:0!important}
-  }
-
-  /* brand: show long on desktop, short on mobile */
-  .brand-short{display:none}
-  .brand-long{display:inline}
-
-  /* sticky mobile bottom CTA */
-  .mobile-cta{display:none}
-
-  /* ---------- mobile ---------- */
-  @media(max-width:600px){
-    /* brand: show LMG abbreviation only */
-    .brand-short{display:inline}
-    .brand-long{display:none}
-
-    /* header: clean single line */
-    .bar{height:52px}
-    .brand{font-size:16px;gap:8px}
-    .brand .mark{width:10px;height:10px}
-
-    /* hide header button on mobile — replaced by sticky bottom bar */
-    .bar .btn{display:none}
-
-    /* sticky bottom booking bar */
-    .mobile-cta{
-      display:flex;
-      position:fixed;bottom:0;left:0;right:0;z-index:100;
-      background:var(--green);color:#fff;
-      padding:16px 24px;
-      align-items:center;justify-content:space-between;
-      border-top:2px solid rgba(255,255,255,.15);
-    }
-    .mobile-cta .mc-label{font-size:13px;opacity:.75;font-family:"Space Mono",monospace;letter-spacing:.05em}
-    .mobile-cta .mc-btn{
-      background:#fff;color:var(--green);
-      font-weight:700;font-size:15px;
-      padding:10px 20px;border-radius:2px;
-      white-space:nowrap;
-    }
-    /* add bottom padding to body so content isn't hidden behind bar */
-    body{padding-bottom:72px}
-
-    /* hero */
-    .hero{padding:32px 0 24px}
-    h1{font-size:30px;line-height:1.05;margin-bottom:14px;letter-spacing:-.02em}
-    .lede{font-size:15.5px;line-height:1.55;margin-bottom:20px}
-    .eyebrow{font-size:10.5px;margin-bottom:14px}
-
-    /* hero buttons: full-width, equal size */
-    .hero-cta{flex-direction:column;gap:10px}
-    .hero-cta .btn{width:100%;justify-content:center;padding:14px 20px;font-size:15px}
-
-    /* trust: vertical list */
-    .trust{flex-direction:column;gap:8px;margin-top:18px;font-size:13px}
-
-    /* spec strip: 2-col */
-    .specs-grid{grid-template-columns:repeat(2,1fr)}
-    .spec{padding:16px 14px}
-    .spec .v{font-size:18px}
-    .spec .k{font-size:10px}
-
-    /* sections: tighter */
-    section{padding:48px 0}
-    .sec-head{margin-bottom:28px}
-    h2{font-size:26px}
-    .cta-band{padding:52px 0;text-align:center}
-    .cta-band .btn{width:100%;justify-content:center}
-
-    /* steps: tighter */
-    .step{padding:22px 18px}
-    .step h3{font-size:18px}
-
-    /* use cases: 2-col */
-    .uses{grid-template-columns:repeat(2,1fr);gap:10px}
-    .use{padding:18px 14px}
-
-    /* why grid: single col */
-    .why-grid{grid-template-columns:1fr;gap:20px}
-    .why{padding:52px 0 !important}
-
-    /* footer: stack */
-    .foot{flex-direction:column;align-items:flex-start;gap:10px}
-
-    /* diagram: compact */
-    .diagram{padding:32px 12px 12px}
-    .diagram .tag.r{display:none}
-    .diagram .tag{font-size:10px}
-  }
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  svg .draw,.d2{stroke-dashoffset:0!important}
+}
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="wrap bar">
-    <a href="#top" class="brand"><span class="mark"></span><span class="brand-long">Lehmann Mobility Group</span><span class="brand-short">LMG</span></a>
-    <nav class="navlinks">
-      <a href="#fahrzeug">Fahrzeug</a>
-      <a href="#ablauf">So funktioniert's</a>
+    <a href="#top" class="brand">
+      <span class="mark"></span>
+      <span class="brand-long">Lehmann Mobility Group</span>
+      <span class="brand-short">LMG</span>
+    </a>
+    <nav class="nav">
+      <a href="#ablauf">Ablauf</a>
       <a href="#einsatz">Einsatz</a>
       <a href="#warum">Warum wir</a>
     </nav>
-    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Jetzt buchen <span class="arrow">&rarr;</span></a>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Jetzt buchen <span class="arrow">→</span></a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal in">
-        <div class="eyebrow">Transporter mieten &middot; Zürich</div>
-        <h1>Der Transporter für deinen <em>Umzug.</em> Stundenweise. Schlüssellos.</h1>
-        <p class="lede">Gepflegter Renault Trafic mitten in Zürich — buchen, mit dem Handy aufschliessen, losfahren. Kein Schlüsselübergabe-Theater, keine Öffnungszeiten.</p>
-        <div class="hero-cta">
-          <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Auf GoMore buchen <span class="arrow">&rarr;</span></a>
-          <a href="#fahrzeug" class="btn ghost">Laderaum ansehen</a>
-        </div>
-        <div class="trust">
-          <span><span class="dot"></span>Vollkasko über GoMore / Baloise</span>
-          <span><span class="dot"></span>E-Vignette inklusive</span>
-          <span><span class="dot"></span>Zentral in Zürich</span>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <div class="eyebrow">Transporter mieten · Zürich</div>
+      <h1>Dein Van.<br><em>Stundenweise.</em><br>Schlüssellos.</h1>
+      <p class="lede">Renault Trafic in Zürich — buchen, per Handy aufschliessen, losfahren. Keine Übergabe, keine Öffnungszeiten.</p>
+      <div class="hero-btns">
+        <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Auf GoMore buchen <span class="arrow">→</span></a>
+        <a href="#ablauf" class="btn ghost">Wie funktioniert's?</a>
       </div>
-
-      <div class="diagram reveal in">
-        <span class="tag">Renault Trafic &middot; dCi 115</span>
-        <span class="tag r mono">Massstab 1:40</span>
-        <svg viewBox="0 0 820 430" width="100%" role="img" aria-label="Technische Zeichnung des Transporters mit Laderaum-Massen">
-          <g fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-            <path class="draw" d="M60,312 L60,212 L82,150 L152,140 L208,82 L772,82 L780,302 L700,312
-                     L686,312 A46,46 0 0 0 594,312 L262,312 A46,46 0 0 0 170,312 Z"/>
-            <path class="draw d2" d="M300,82 L300,312"/>
-            <path class="draw d2" d="M212,98 L292,98 L292,168 L196,168 Z"/>
-            <path class="draw d2" d="M540,90 L540,300"/>
-          </g>
-          <g fill="none" stroke="var(--ink)" stroke-width="3">
-            <circle class="draw d2" cx="216" cy="312" r="40"/>
-            <circle class="draw d2" cx="640" cy="312" r="40"/>
-            <circle cx="216" cy="312" r="14" fill="var(--ink)"/>
-            <circle cx="640" cy="312" r="14" fill="var(--ink)"/>
-          </g>
-          <g stroke="var(--clay)" stroke-width="2" fill="var(--clay)" class="draw d2">
-            <line x1="300" y1="372" x2="772" y2="372"/>
-            <line x1="300" y1="362" x2="300" y2="382"/>
-            <line x1="772" y1="362" x2="772" y2="382"/>
-          </g>
-          <text x="536" y="400" text-anchor="middle" fill="var(--clay)" font-family="Space Mono, monospace" font-size="17" font-weight="700">2.54 m Laderaum</text>
-          <g stroke="var(--clay)" stroke-width="2" class="draw d2">
-            <line x1="798" y1="82" x2="798" y2="302"/>
-            <line x1="788" y1="82" x2="808" y2="82"/>
-            <line x1="788" y1="302" x2="808" y2="302"/>
-          </g>
-          <text x="812" y="200" fill="var(--clay)" font-family="Space Mono, monospace" font-size="15" font-weight="700" transform="rotate(90 812 200)" text-anchor="middle">1.39 m</text>
-        </svg>
+      <div class="trust-row">
+        <span><span class="tdot"></span>Vollkasko über Baloise</span>
+        <span><span class="tdot"></span>E-Vignette dabei</span>
+        <span><span class="tdot"></span>Zentral in Zürich</span>
       </div>
     </div>
-  </section>
 
-  <!-- SPEC STRIP -->
-  <div class="specs" id="fahrzeug">
-    <div class="wrap">
-      <div class="specs-grid">
-        <div class="spec"><div class="k">Laderaum L × B × H</div><div class="v">2.54×1.66<small> ×1.39 m</small></div></div>
-        <div class="spec"><div class="k">Ladekante</div><div class="v">552<small> mm</small></div></div>
-        <div class="spec"><div class="k">Getriebe</div><div class="v">Manuell</div></div>
-        <div class="spec"><div class="k">Antrieb</div><div class="v">Diesel<small> dCi 115</small></div></div>
-        <div class="spec"><div class="k">Zugang</div><div class="v">Keyless</div></div>
-      </div>
+    <div class="diagram reveal in">
+      <span class="dtag">Renault Trafic · dCi 115</span>
+      <svg viewBox="0 0 820 430" width="100%" role="img" aria-label="Technische Zeichnung Trafic">
+        <g fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+          <path class="draw" d="M60,312 L60,212 L82,150 L152,140 L208,82 L772,82 L780,302 L700,312 L686,312 A46,46 0 0 0 594,312 L262,312 A46,46 0 0 0 170,312 Z"/>
+          <path class="d2" d="M300,82 L300,312"/>
+          <path class="d2" d="M212,98 L292,98 L292,168 L196,168 Z"/>
+          <path class="d2" d="M540,90 L540,300"/>
+        </g>
+        <g fill="none" stroke="var(--ink)" stroke-width="2.5">
+          <circle class="d2" cx="216" cy="312" r="40"/>
+          <circle class="d2" cx="640" cy="312" r="40"/>
+        </g>
+        <circle cx="216" cy="312" r="13" fill="var(--ink)"/>
+        <circle cx="640" cy="312" r="13" fill="var(--ink)"/>
+        <!-- length annotation -->
+        <g stroke="var(--clay)" stroke-width="1.8" class="d2">
+          <line x1="300" y1="374" x2="772" y2="374"/>
+          <line x1="300" y1="364" x2="300" y2="384"/>
+          <line x1="772" y1="364" x2="772" y2="384"/>
+        </g>
+        <text x="536" y="400" text-anchor="middle" fill="var(--clay)" font-family="Space Mono,monospace" font-size="15" font-weight="700">2.54 m Laderaum</text>
+        <!-- height annotation -->
+        <g stroke="var(--clay)" stroke-width="1.8" class="d2">
+          <line x1="798" y1="82" x2="798" y2="302"/>
+          <line x1="788" y1="82" x2="808" y2="82"/>
+          <line x1="788" y1="302" x2="808" y2="302"/>
+        </g>
+        <text x="812" y="200" fill="var(--clay)" font-family="Space Mono,monospace" font-size="13" font-weight="700" transform="rotate(90 812 200)" text-anchor="middle">1.39 m</text>
+      </svg>
     </div>
   </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section id="ablauf">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="sec-eyebrow">So funktioniert's</div>
-        <h2>In drei Schritten unterwegs.</h2>
-        <p>Komplett über GoMore — du brauchst nur dein Handy.</p>
-      </div>
-      <div class="steps reveal">
-        <div class="step">
-          <div class="num">01</div>
+<!-- SPEC STRIP -->
+<div class="specs" id="fahrzeug">
+  <div class="wrap">
+    <div class="specs-grid">
+      <div class="spec"><div class="sk">Laderaum L×B×H</div><div class="sv">2.54×1.66<small> ×1.39 m</small></div></div>
+      <div class="spec"><div class="sk">Ladekante</div><div class="sv">552<small> mm</small></div></div>
+      <div class="spec"><div class="sk">Getriebe</div><div class="sv">Manuell</div></div>
+      <div class="spec"><div class="sk">Antrieb</div><div class="sv">Diesel<small> dCi 115</small></div></div>
+      <div class="spec"><div class="sk">Zugang</div><div class="sv">Keyless</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="section-label">So funktioniert's</div>
+      <h2>In 3 Schritten unterwegs</h2>
+    </div>
+    <div class="steps-flow reveal">
+
+      <div class="sf-step">
+        <div class="sf-icon">
+          <!-- smartphone icon -->
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-width="2.5"/></svg>
+        </div>
+        <div>
           <h3>Buchen</h3>
-          <p>Zeitraum auf GoMore wählen — stundenweise oder pro Tag. Bestätigung kommt sofort.</p>
+          <p>Datum & Zeit auf GoMore wählen — Bestätigung kommt sofort.</p>
         </div>
-        <div class="step">
-          <div class="num">02</div>
+      </div>
+
+      <div class="sf-step">
+        <div class="sf-icon">
+          <!-- unlock icon -->
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+        </div>
+        <div>
           <h3>Aufschliessen</h3>
-          <p>Zur vereinbarten Zeit per App entriegeln. Keine Schlüsselübergabe, kein Warten.</p>
+          <p>Per GoMore-App entriegeln — kein Schlüssel, kein Warten.</p>
         </div>
-        <div class="step">
-          <div class="num">03</div>
+      </div>
+
+      <div class="sf-step">
+        <div class="sf-icon">
+          <!-- steering wheel / van icon -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.2" y1="16.5" x2="10" y2="13.7"/><line x1="19.8" y1="16.5" x2="14" y2="13.7"/></svg>
+        </div>
+        <div>
           <h3>Losfahren</h3>
-          <p>Beladen und los. Nach der Fahrt am selben Ort abstellen und per App abschliessen.</p>
+          <p>Beladen und los. Danach zurückstellen und abschliessen.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- USE CASES -->
-  <section id="einsatz" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="sec-eyebrow">Wofür</div>
-        <h2>Genug Platz für fast alles.</h2>
-      </div>
-      <div class="uses reveal">
-        <div class="use"><div class="ic">/ 01</div><h3>Umzug</h3><p>WG, Wohnung oder ein paar Zimmer — passt rein.</p></div>
-        <div class="use"><div class="ic">/ 02</div><h3>Möbel & IKEA</h3><p>Sofa, Schrank, Matratze ohne Liefergebühr.</p></div>
-        <div class="use"><div class="ic">/ 03</div><h3>Baumarkt & Garten</h3><p>Material, Pflanzen, Sperrgut nach Hause.</p></div>
-        <div class="use"><div class="ic">/ 04</div><h3>Verein & Gewerbe</h3><p>Transport für Anlass, Markt oder Auftrag.</p></div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHY -->
-  <section class="why" id="warum">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="sec-eyebrow">Warum Lehmann Mobility Group</div>
-        <h2>Ein gepflegter Van, fair und unkompliziert.</h2>
-      </div>
-      <div class="why-grid reveal">
-        <div class="point"><span class="b">✓</span><div><h3>Versichert über GoMore</h3><p>Jede Buchung läuft mit Vollkasko-Schutz über Baloise — du fährst abgesichert.</p></div></div>
-        <div class="point"><span class="b">✓</span><div><h3>E-Vignette inklusive</h3><p>Autobahn ist abgedeckt. Du musst dich um nichts kümmern.</p></div></div>
-        <div class="point"><span class="b">✓</span><div><h3>Faire Stundenpreise</h3><p>Zahl nur die Zeit, die du brauchst — kein Tagespaket für die IKEA-Fahrt.</p></div></div>
-        <div class="point"><span class="b">✓</span><div><h3>Zentral & schlüssellos</h3><p>Fester Standort in der Stadt, jederzeit per App zugänglich.</p></div></div>
-      </div>
+<!-- USE CASES -->
+<section class="uses-sec" id="einsatz">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="section-label">Wofür</div>
+      <h2>Passt für fast alles</h2>
     </div>
-  </section>
+    <div class="use-grid reveal">
 
-  <!-- FINAL CTA -->
-  <section class="cta-band" id="buchen">
-    <div class="wrap reveal">
-      <div class="sec-eyebrow" style="text-align:center">Verfügbarkeit & Preise</div>
-      <h2>Transporter heute noch buchen.</h2>
-      <p>Live-Verfügbarkeit und aktuelle Preise siehst du direkt auf GoMore.</p>
-      <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn" style="padding:15px 28px;font-size:16px">Auf GoMore buchen <span class="arrow">&rarr;</span></a>
+      <div class="use-card">
+        <div class="use-icon">
+          <!-- boxes / moving icon -->
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Umzug</h3>
+        <p>WG, Zimmer, ganze Wohnung — passt rein.</p>
+      </div>
+
+      <div class="use-card">
+        <div class="use-icon">
+          <!-- sofa icon -->
+          <svg viewBox="0 0 24 24"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4H2z"/><line x1="6" y1="19" x2="6" y2="15"/><line x1="18" y1="19" x2="18" y2="15"/></svg>
+        </div>
+        <h3>Möbel & IKEA</h3>
+        <p>Sofa, Schrank, Matratze — ohne Liefergebühr.</p>
+      </div>
+
+      <div class="use-card">
+        <div class="use-icon">
+          <!-- tools icon -->
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Baumarkt</h3>
+        <p>Material, Werkzeug, Sperrgut — direkt nach Hause.</p>
+      </div>
+
+      <div class="use-card">
+        <div class="use-icon">
+          <!-- calendar / event icon -->
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Anlass & Gewerbe</h3>
+        <p>Markt, Verein, Lieferung — auch stundenweise.</p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-sec" id="warum">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="section-label">Warum Lehmann Mobility</div>
+      <h2>Fair. Versichert. Einfach.</h2>
+    </div>
+    <div class="why-grid reveal">
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- shield icon -->
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>Vollkasko inbegriffen</h3>
+          <p>Jede Buchung ist über GoMore & Baloise vollversichert.</p>
+        </div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- road / vignette icon -->
+          <svg viewBox="0 0 24 24"><path d="M3 17l9-14 9 14H3z"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="12" y1="16" x2="12" y2="17"/></svg>
+        </div>
+        <div>
+          <h3>E-Vignette dabei</h3>
+          <p>Autobahn einfach mitbenutzen — ist alles inklusive.</p>
+        </div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- clock icon -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h3>Stundenweise buchen</h3>
+          <p>Nur zahlen was du brauchst — kein Tagespaket.</p>
+        </div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- map pin icon -->
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Zentral & schlüssellos</h3>
+          <p>Fester Standort in Zürich, jederzeit per App zugänglich.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="buchen">
+  <div class="wrap reveal">
+    <div class="section-label" style="text-align:center">Jetzt buchen</div>
+    <h2>Verfügbarkeit & Preise auf GoMore</h2>
+    <p>Live-Kalender und aktuelle Preise direkt auf der Plattform.</p>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="btn">Auf GoMore buchen <span class="arrow">→</span></a>
+  </div>
+</section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap foot">
     <a href="#top" class="brand"><span class="mark"></span><span class="brand-long">Lehmann Mobility Group</span><span class="brand-short">LMG</span></a>
-    <div>Transporter-Vermietung &middot; Zürich</div>
-    <div><a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener">Auf GoMore ansehen &rarr;</a></div>
+    <div>Transporter-Vermietung · Zürich</div>
+    <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener">GoMore ansehen →</a>
   </div>
 </footer>
 
-<!-- mobile sticky bottom bar -->
-<div class="mobile-cta">
-  <div>
-    <div class="mc-label">Transporter · Zürich</div>
-    <div style="font-weight:700;font-size:15px">Jetzt stundenweise buchen</div>
+<!-- MOBILE STICKY BAR -->
+<div class="mob-bar">
+  <div class="mob-bar-txt">
+    <div class="mbt-sub">Renault Trafic · Zürich</div>
+    <div class="mbt-main">Jetzt stundenweise buchen</div>
   </div>
-  <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="mc-btn">GoMore →</a>
+  <a href="https://gomore.ch/cars/2309890" target="_blank" rel="noopener" class="mob-bar-btn">GoMore →</a>
 </div>
 
 <script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.15});
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
